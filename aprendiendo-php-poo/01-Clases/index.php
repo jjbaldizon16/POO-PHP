@@ -1,6 +1,6 @@
 <?php
 
-echo "<h1>Prueba</h1>";
+echo "<h1>POO PHP</h1>";
 
 // Programacion Orientada a Objetos en PHP (POO)
 
@@ -32,6 +32,18 @@ class Coche {
    $this->color = $color;
   }
 
+  public function setModelo($modelo) {
+
+   $this->modelo = $modelo;
+
+  }
+
+  public function getModelo() {
+
+     return $this->modelo;
+
+  }
+
 
 
 public function acelerar() {
@@ -55,6 +67,47 @@ public function getVelocidad() {
 
 } //Fin definicion de la clase
 
+ // Crear un objeto / Instanciar la clase
 
+ $coche = new Coche();
+
+ var_dump($coche);
+
+ // Usar los metodos
+
+ echo $coche->getVelocidad();
+
+ $coche->setColor("Amarillo");
+
+ echo "El color del coche es: ".$coche->getColor()."<br>";
+
+ $coche->acelerar();
+ $coche->acelerar();
+ $coche->acelerar();
+ $coche->acelerar();
+ $coche->frenar();
+
+ echo "La velocidad del coche es: ".$coche->getVelocidad()."<br>";
+
+ $coche2 = new Coche();
+
+ echo "El color del coche2 es: ".$coche2->getColor()."<br>";
+
+ var_dump($coche);
+ var_dump($coche2);
+
+ $coche2->setColor("Verde");
+
+ var_dump($coche2);
+
+ echo "El color del coche2: ".$coche2->getColor()."<br>";
+
+ echo "Y el modelo del coche2 es: ".$coche2->getModelo()."<br>";
+
+ $coche2->setModelo("Jaguar");
+
+ var_dump($coche2);
+
+ echo "Pero ahora yo decido que el modelo del coche2 es: ".$coche2->getModelo()."<br>";
 
 ?>
